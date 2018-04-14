@@ -1,0 +1,19 @@
+server:
+  port: 8888
+spring:
+  profile: 
+    active: native
+  cloud: 
+    config:
+      server: 
+        git: 
+          uri: https://github.com/uyennguyen87/springclould-serverconfig-data
+          search-paths:
+          - 'service*'
+          repos:
+            perf:
+              pattern:
+                - "*/perf"
+              uri: https://github.com/uyennguyen87/springclould-serverconfig-data-perf
+              search-paths:
+              - 'service*'
